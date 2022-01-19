@@ -10,9 +10,13 @@ const UserList = (props) => {
             {props.users.map((user, index) => {
               return (
               <div key={index}>
-                <h5 className="text-warning">{user.name}</h5>
-                <h5 className="text-secondary">{user.email}</h5>
-                <h5 className="text-success">{user.gen}</h5>
+                <div class="card mt-1 mb-1 text-center bg-dark">
+                  <div class="card-body">
+                    <h5 className="text-warning">{user.name}</h5>
+                    <h5 className="text-white">{user.email}</h5>
+                    <h5 className="text-success">{user.gen}</h5>
+                  </div>
+                </div>
               </div>
             );
           })}
