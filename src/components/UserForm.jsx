@@ -38,7 +38,7 @@ const UserForm = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 mx-auto mt-3 border">
-           <form className="mt-2" onSubmit={handleSubmit}>
+           <form className="mt-2">
              <div className="form-group">
                 <label className="text-danger h5">Name</label>
                 <input className="form-control" name="name" type="text" placeholder="Full Name" value={name} onChange={handleNameChange} />
@@ -51,8 +51,8 @@ const UserForm = (props) => {
                 <label className="text-danger h5">Generation</label>
                 <input className="form-control" name="gen" type="text" placeholder="Gen. Year" value={gen} onChange={handleGenChange} />
              </div>
+             <input className="btn btn-primary btn-block mb-4" type="submit" value="Submit" onClick={handleSubmit} />
              </form>
-             <input className="btn btn-primary btn-block mb-4" type="submit" value="Submit" />
           </div>
         </div>
       </div>
