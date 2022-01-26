@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 const UserForm = (props) => {
   const [name, setName] = useState("");
@@ -20,7 +21,15 @@ const UserForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // let newUser = {
+    //   name: name,
+    //   email: email,
+    //   gen: gen,
+    // };
+
+    //new user object with unique id, name and email
     let newUser = {
+      id: uuid(),
       name: name,
       email: email,
       gen: gen,
